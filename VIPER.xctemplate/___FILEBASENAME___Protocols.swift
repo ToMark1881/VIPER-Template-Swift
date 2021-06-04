@@ -1,11 +1,10 @@
 //  VIPER Template created by Vladyslav Vdovychenko
-//
 //  ___FILEHEADER___
 
 import Foundation
 import UIKit
 
-// View - Presenter
+// MARK: - View - Presenter
 protocol ___VARIABLE_productName___ViewPresenterInputProtocol: BaseViewController {
     
     var presenter: ___VARIABLE_productName___ViewPresenterOutputProtocol? { get set }
@@ -18,7 +17,7 @@ protocol ___VARIABLE_productName___ViewPresenterOutputProtocol: AnyObject {
         
 }
 
-// Interactor - Presenter
+// MARK: - Interactor - Presenter
 protocol ___VARIABLE_productName___InteractorPresenterInputProtocol: AnyObject {
     
     var presenter: ___VARIABLE_productName___InteractorPresenterOutputProtocol? { get set }
@@ -31,7 +30,7 @@ protocol ___VARIABLE_productName___InteractorPresenterOutputProtocol: AnyObject 
     
 }
 
-// Router - Presenter
+// MARK: - Router - Presenter
 protocol ___VARIABLE_productName___RouterPresenterInputProtocol: AnyObject {
     
     var presenter: ___VARIABLE_productName___RouterPresenterOutputProtocol? { get set }

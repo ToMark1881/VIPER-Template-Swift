@@ -7,7 +7,7 @@ import UIKit
 class ___VARIABLE_productName___Wireframe: BaseWireframe {
     
     override func storyboardName() -> String {
-        return ""
+        return "<#storyboard name#>"
     }
     
     override func identifier() -> String {

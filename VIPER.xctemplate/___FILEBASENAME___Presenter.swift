@@ -1,5 +1,4 @@
 //  VIPER Template created by Vladyslav Vdovychenko
-//
 //  ___FILEHEADER___
 
 import Foundation
@@ -14,17 +13,17 @@ class ___VARIABLE_productName___Presenter: BasePresenter {
     
 }
 
-// View - Presenter
+// MARK: - View - Presenter
 extension ___VARIABLE_productName___Presenter: ___VARIABLE_productName___ViewPresenterOutputProtocol {
     
 }
 
-// Interactor - Presenter
+// MARK: - Interactor - Presenter
 extension ___VARIABLE_productName___Presenter: ___VARIABLE_productName___InteractorPresenterOutputProtocol {
     
 }
 
-//Router - Presenter
+// MARK: - Router - Presenter
 extension ___VARIABLE_productName___Presenter: ___VARIABLE_productName___RouterPresenterOutputProtocol {
     
 }

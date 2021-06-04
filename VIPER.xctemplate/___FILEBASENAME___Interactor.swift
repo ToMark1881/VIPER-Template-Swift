@@ -1,5 +1,4 @@
 //  VIPER Template created by Vladyslav Vdovychenko
-//
 //  ___FILEHEADER___
 
 import Foundation
