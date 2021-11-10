@@ -5,7 +5,7 @@ import Foundation
 import UIKit
 
 // MARK: - View - Presenter
-protocol ___VARIABLE_productName___ViewPresenterInputProtocol: BaseViewController {
+protocol ___VARIABLE_productName___ViewPresenterInputProtocol: BaseViewControllerProtocol {
     
     var presenter: ___VARIABLE_productName___ViewPresenterOutputProtocol? { get set }
     

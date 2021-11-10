@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+protocol BaseViewControllerProtocol where Self: BaseViewController {
+    
+    var navigationController: UINavigationController? { get }
+    
+}
 
 class BaseViewController: UIViewController {
 
