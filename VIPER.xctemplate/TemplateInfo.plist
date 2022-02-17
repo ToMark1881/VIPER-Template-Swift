@@ -4,26 +4,47 @@
 <dict>
 	<key>Kind</key>
 	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
-	<key>Platforms</key>
-	<array>
-		<string>com.apple.platform.iphoneos</string>
-	</array>
+	<key>Description</key>
+	<string>Create a new VIPER module</string>
 	<key>Options</key>
 	<array>
 		<dict>
-			<key>Identifier</key>
-			<string>productName</string>
-			<key>Required</key>
-			<true/>
-			<key>Name</key>
-			<string>Module:</string>
 			<key>Description</key>
 			<string>The name of the VIPER Module</string>
-			<key>Type</key>
-			<string>text</string>
 			<key>Default</key>
 			<string>VIPER Module</string>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Name</key>
+			<string>Module:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
 		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>complex</string>
+			<key>Name</key>
+			<string>Select module type (components):</string>
+			<key>Description</key>
+			<string>Type of a module to generate - simple, with test, with single delegate (output), with input and output delegates</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>Base Module</string>
+			<key>Values</key>
+			<array>
+				<string>Base Module</string>
+				<string>Module with Unit Test</string>
+				<string>Module with Unit Test and Delegate</string>
+				<string>Module with Unit Test and InputOutput Delegates</string>
+			</array>
+		</dict>
+	</array>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
 	</array>
 </dict>
 </plist>
