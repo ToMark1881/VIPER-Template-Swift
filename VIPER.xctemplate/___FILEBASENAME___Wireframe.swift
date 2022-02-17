@@ -4,7 +4,7 @@
 import Foundation
 import UIKit
 
-class ___VARIABLE_productName___Wireframe: BaseWireframe {
+final class ___VARIABLE_productName___Wireframe: BaseWireframe {
     
     override func storyboardName() -> String {
         return "<#storyboard name#>"
@@ -15,48 +15,35 @@ class ___VARIABLE_productName___Wireframe: BaseWireframe {
     }
     
     func pushFrom(_ parent: UINavigationController?) {
-        if let view: ___VARIABLE_productName___ViewController = initializeController(), let parent = parent {
-            
-            let presenter: ___VARIABLE_productName___ViewPresenterOutputProtocol & ___VARIABLE_productName___InteractorPresenterOutputProtocol & ___VARIABLE_productName___RouterPresenterOutputProtocol = ___VARIABLE_productName___Presenter()
-            let router: ___VARIABLE_productName___RouterPresenterInputProtocol = ___VARIABLE_productName___Router()
-            let interactor: ___VARIABLE_productName___InteractorPresenterInputProtocol = ___VARIABLE_productName___Interactor()
-            
-            presenter.view = view
-            presenter.router = router
-            presenter.interactor = interactor
-            
-            interactor.presenter = presenter
-            view.presenter = presenter
-            router.presenter = presenter
-
-            presenter.view = view
-            self.presentedViewController = view
-            parent.pushViewController(view, animated: true)
-        }
+        guard let viewController = self.createModule(), let parent = parent else { return }
+        self.presentedViewController = viewController
+        parent.pushViewController(viewController, animated: true)
     }
     
     func presentIn(_ parent: UIViewController?) {
-        if let view: ___VARIABLE_productName___ViewController = initializeController(), let parent = parent {
-            let navigationController = UINavigationController(rootViewController: view)
-            
-            let presenter: ___VARIABLE_productName___ViewPresenterOutputProtocol & ___VARIABLE_productName___InteractorPresenterOutputProtocol & ___VARIABLE_productName___RouterPresenterOutputProtocol = ___VARIABLE_productName___Presenter()
-            let router: ___VARIABLE_productName___RouterPresenterInputProtocol = ___VARIABLE_productName___Router()
-            let interactor: ___VARIABLE_productName___InteractorPresenterInputProtocol = ___VARIABLE_productName___Interactor()
-            
-            presenter.view = view
-            presenter.router = router
-            presenter.interactor = interactor
-            
-            interactor.presenter = presenter
-            view.presenter = presenter
-            router.presenter = presenter
-
-            presenter.view = view
-            self.presentedViewController = view
-            
-            navigationController.modalPresentationStyle = .fullScreen
-            parent.present(navigationController, animated: true, completion: nil)
-        }
+        guard let viewController = self.createModule(), let parent = parent else { return }
+        let navigationController = UINavigationController(rootViewController: viewController)
+        self.presentedViewController = viewController
+        
+        navigationController.modalPresentationStyle = .fullScreen
+        parent.present(navigationController, animated: true, completion: nil)
+    }
+    
+    func createModule() -> ___VARIABLE_productName___ViewController? {
+        guard let view: ___VARIABLE_productName___ViewController = initializeController() else { return nil }
+        let presenter: ___VARIABLE_productName___ViewPresenterOutputProtocol & ___VARIABLE_productName___InteractorPresenterOutputProtocol & ___VARIABLE_productName___RouterPresenterOutputProtocol = ___VARIABLE_productName___Presenter()
+        let router: ___VARIABLE_productName___RouterPresenterInputProtocol = ___VARIABLE_productName___Router()
+        let interactor: ___VARIABLE_productName___InteractorPresenterInputProtocol = ___VARIABLE_productName___Interactor()
+        
+        presenter.view = view
+        presenter.router = router
+        presenter.interactor = interactor
+        
+        interactor.presenter = presenter
+        view.presenter = presenter
+        router.presenter = presenter
+        
+        return view
     }
     
 }

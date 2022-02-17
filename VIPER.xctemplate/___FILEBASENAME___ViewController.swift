@@ -3,7 +3,7 @@
 
 import UIKit
 
-class ___VARIABLE_productName___ViewController: BaseViewController {
+final class ___VARIABLE_productName___ViewController: BaseViewController {
     
     var presenter: ___VARIABLE_productName___ViewPresenterOutputProtocol?
 

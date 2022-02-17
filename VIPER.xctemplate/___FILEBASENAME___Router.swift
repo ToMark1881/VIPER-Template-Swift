@@ -4,7 +4,7 @@
 import Foundation
 import UIKit
 
-class ___VARIABLE_productName___Router: BaseRouter {
+final class ___VARIABLE_productName___Router: BaseRouter {
     
     weak var presenter: ___VARIABLE_productName___RouterPresenterOutputProtocol?
     

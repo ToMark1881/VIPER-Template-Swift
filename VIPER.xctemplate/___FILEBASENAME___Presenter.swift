@@ -3,7 +3,7 @@
 
 import Foundation
 
-class ___VARIABLE_productName___Presenter: BasePresenter {
+final class ___VARIABLE_productName___Presenter: BasePresenter {
     
     weak var view: ___VARIABLE_productName___ViewPresenterInputProtocol?
     

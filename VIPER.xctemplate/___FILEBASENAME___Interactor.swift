@@ -3,7 +3,7 @@
 
 import Foundation
 
-class ___VARIABLE_productName___Interactor: BaseInteractor {
+final class ___VARIABLE_productName___Interactor: BaseInteractor {
     
     weak var presenter: ___VARIABLE_productName___InteractorPresenterOutputProtocol?
     
