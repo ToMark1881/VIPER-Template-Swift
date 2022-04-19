@@ -23,7 +23,7 @@ class ___VARIABLE_productName___TestCase: XCTestCase {
             XCTAssertNotNil(presenter.interactor)
             XCTAssertNotNil(presenter.view)
         } else {
-            XCTFail()
+            XCTFail("Module generation failed")
         }
     }
 

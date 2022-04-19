@@ -31,7 +31,9 @@ final class ___VARIABLE_productName___Wireframe: BaseWireframe {
     
     func createModule(delegate: ___VARIABLE_productName___Delegate) -> ___VARIABLE_productName___ViewController? {
         guard let view: ___VARIABLE_productName___ViewController = initializeController() else { return nil }
-        let presenter: ___VARIABLE_productName___ViewPresenterOutputProtocol & ___VARIABLE_productName___InteractorPresenterOutputProtocol & ___VARIABLE_productName___RouterPresenterOutputProtocol = ___VARIABLE_productName___Presenter()
+        let presenter: ___VARIABLE_productName___ViewPresenterOutputProtocol &
+        ___VARIABLE_productName___InteractorPresenterOutputProtocol &
+        ___VARIABLE_productName___RouterPresenterOutputProtocol = ___VARIABLE_productName___Presenter()
         let router: ___VARIABLE_productName___RouterPresenterInputProtocol = ___VARIABLE_productName___Router()
         let interactor: ___VARIABLE_productName___InteractorPresenterInputProtocol = ___VARIABLE_productName___Interactor()
         

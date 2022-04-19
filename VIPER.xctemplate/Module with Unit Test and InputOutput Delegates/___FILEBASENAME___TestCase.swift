@@ -26,7 +26,7 @@ class ___VARIABLE_productName___TestCase: XCTestCase {
             XCTAssertNotNil(presenter.delegate)
             XCTAssertNotNil(self.moduleInputDelegate)
         } else {
-            XCTFail()
+            XCTFail("Module generation failed")
         }
     }
 
